@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Edge-Resilient Kiosk Demo</title>
+  <link rel="stylesheet" href="/kiosk/styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <section class="panel">
+      <div class="eyebrow">REFERENCE IMPLEMENTATION</div>
+      <h1>Edge-Resilient Kiosk</h1>
+      <p class="lead">Submit feedback while online, switch into demo offline mode, then restore connectivity and watch the queue synchronize automatically.</p>
+
+      <div class="status-row">
+        <span id="networkStatus" class="status">Checking…</span>
+        <span class="pending">Pending: <strong id="pendingCount">0</strong></span>
+      </div>
+
+      <form id="feedbackForm">
+        <label>
+          Name <span>(optional)</span>
+          <input id="visitorName" maxlength="80" autocomplete="name" placeholder="Visitor name" />
+        </label>
+
+        <label>
+          Rating
+          <select id="rating" required>
+            <option value="">Select</option>
+            <option value="5">5 — Excellent</option>
+            <option value="4">4 — Good</option>
+            <option value="3">3 — Okay</option>
+            <option value="2">2 — Poor</option>
+            <option value="1">1 — Very poor</option>
+          </select>
+        </label>
+
+        <label>
+          Comment <span>(optional)</span>
+          <textarea id="comment" maxlength="500" rows="5" placeholder="What stood out?"></textarea>
+        </label>
+
+        <button id="submitButton" class="primary" type="submit">Submit feedback</button>
+      </form>
+
+      <div class="controls">
+        <button id="offlineToggle" type="button">Enable demo offline mode</button>
+        <button id="syncButton" type="button">Sync now</button>
+        <a href="/operator/" target="_blank" rel="noreferrer">Open operator view ↗</a>
+      </div>
+
+      <div id="message" class="message" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <script src="/kiosk/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #18212f;
+  background: #f3f5f8;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; }
+
+.shell {
+  width: min(1100px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 36px 0 60px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.eyebrow {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #667085;
+}
+
+h1 { margin: 7px 0 8px; font-size: clamp(30px, 5vw, 46px); }
+header p { max-width: 720px; margin: 0; color: #667085; line-height: 1.6; }
+
+.actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+button, .actions a, .status {
+  min-height: 36px;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 10px;
+  padding: 0 12px;
+  border: 1px solid #d0d5dd;
+  background: #ffffff;
+  color: #18212f;
+  text-decoration: none;
+  font: inherit;
+  font-weight: 700;
+}
+
+button { cursor: pointer; }
+button:disabled { opacity: 0.55; cursor: not-allowed; }
+
+.status { font-size: 12px; letter-spacing: 0.05em; }
+.status[data-state="live"] { border-color: #9fd7b5; background: #eefbf3; }
+.status[data-state="error"] { border-color: #e5b4b4; background: #fff3f3; }
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.metrics article, .card, .empty {
+  background: #ffffff;
+  border: 1px solid #dce3ea;
+  border-radius: 15px;
+}
+
+.metrics article { padding: 18px; }
+.metrics span { display: block; color: #667085; font-size: 13px; margin-bottom: 7px; }
+.metrics strong { font-size: 24px; }
+
+.list { display: grid; gap: 12px; }
+.card { padding: 18px; }
+.card-top { display: flex; justify-content: space-between; gap: 18px; align-items: flex-start; }
+.card-top strong { display: block; }
+.card-top span { display: block; margin-top: 4px; color: #667085; font-size: 13px; }
+.rating { font-size: 18px; letter-spacing: 0.05em; white-space: nowrap; }
+.card p { color: #475467; line-height: 1.55; }
+.card code { color: #667085; }
+.empty { padding: 28px; text-align: center; color: #667085; }
+.empty[hidden] { display: none; }
+
+@media (max-width: 760px) {
+  header { flex-direction: column; }
+  .metrics { grid-template-columns: 1fr; }
+  .card-top { flex-direction: column; }
+}

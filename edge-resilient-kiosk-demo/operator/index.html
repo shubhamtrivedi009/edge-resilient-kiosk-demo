@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Operator View — Edge Kiosk Demo</title>
+  <link rel="stylesheet" href="/operator/styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <div>
+        <div class="eyebrow">OPERATOR VIEW</div>
+        <h1>Live Feedback</h1>
+        <p>Initial state comes from the API. New submissions arrive through Server-Sent Events without manual refresh.</p>
+      </div>
+      <div class="actions">
+        <span id="streamStatus" class="status">Connecting…</span>
+        <button id="refreshButton" type="button">Refresh</button>
+        <a href="/">Kiosk ↗</a>
+      </div>
+    </header>
+
+    <section class="metrics">
+      <article><span>Total</span><strong id="totalCount">0</strong></article>
+      <article><span>Average rating</span><strong id="averageRating">—</strong></article>
+      <article><span>Latest</span><strong id="latestTime">—</strong></article>
+    </section>
+
+    <section>
+      <div id="emptyState" class="empty">No submissions yet. Open the kiosk and add one.</div>
+      <div id="feedbackList" class="list"></div>
+    </section>
+  </main>
+
+  <script src="/operator/app.js"></script>
+</body>
+</html>
