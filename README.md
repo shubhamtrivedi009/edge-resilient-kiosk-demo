@@ -29,19 +29,19 @@ The demo includes a visitor-facing kiosk and a live operator view.
 
 The kiosk accepts submissions directly when the local service is available.
 
-![Kiosk online](assets/screenshots/kiosk-online.png)
+![Kiosk online](assets/screenshots/kiosk-online.jpeg)
 
 ### 2. Kiosk — offline queue behaviour
 
 When the service becomes unavailable, submissions are stored locally and queued for retry.
 
-![Kiosk offline queue](assets/screenshots/kiosk-offline-queue.png)
+![Kiosk offline queue](assets/screenshots/kiosk-offline-queue.jpeg)
 
 ### 3. Operator view — synchronized live feed
 
 The operator interface receives new submissions in real time once they are accepted by the backend.
 
-![Operator dashboard](assets/screenshots/operator-dashboard.png)
+![Operator dashboard](assets/screenshots/operator-dashboard.jpeg)
 
 ...
 
