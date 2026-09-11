@@ -21,6 +21,29 @@ Kiosk Browser
              ↓
           Flask API
 ```
+## Interface Preview
+
+The demo includes a visitor-facing kiosk and a live operator view.
+
+### 1. Kiosk — normal online operation
+
+The kiosk accepts submissions directly when the local service is available.
+
+![Kiosk online](assets/screenshots/kiosk-online.png)
+
+### 2. Kiosk — offline queue behaviour
+
+When the service becomes unavailable, submissions are stored locally and queued for retry.
+
+![Kiosk offline queue](assets/screenshots/kiosk-offline-queue.png)
+
+### 3. Operator view — synchronized live feed
+
+The operator interface receives new submissions in real time once they are accepted by the backend.
+
+![Operator dashboard](assets/screenshots/operator-dashboard.png)
+
+...
 
 The important behaviours are:
 
