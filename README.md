@@ -35,7 +35,7 @@ The kiosk accepts submissions directly when the local service is available.
 
 When the service becomes unavailable, submissions are stored locally and queued for retry.
 
-![Kiosk offline queue](assets/screenshots/kiosk-offline-queue.jpeg)
+![Kiosk offline queue](assets/screenshots/kiosk-offline.jpeg)
 
 ### 3. Operator view — synchronized live feed
 
