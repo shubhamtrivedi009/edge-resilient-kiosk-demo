@@ -43,7 +43,6 @@ The operator interface receives new submissions in real time once they are accep
 
 ![Operator dashboard](assets/screenshots/operator-dashboard.jpeg)
 
-...
 
 The important behaviours are:
 
